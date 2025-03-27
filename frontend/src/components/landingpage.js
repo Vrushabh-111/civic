@@ -177,7 +177,7 @@ export default function App() {
                 ...issue, 
                 flags: response.data.flags, 
                 flaggedReasons: response.data.flaggedReasons, 
-                flaggedBy: [...(issue.flaggedBy || []), userId] // Ensure user ID is added to flaggedBy
+                flaggedBy: [...(issue.flaggedBy || []), userId] // Ensure that user ID is added to flaggedBy
               }
             : issue
         )
