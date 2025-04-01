@@ -91,7 +91,7 @@ export default function Trending() {
             ? {
                 ...issue,
                 votes: response.data.votes,
-                upvotedBy: [...issue.upvotedBy, userId],  // Add userId to upvotedBy array
+                upvotedBy: [...issue.upvotedBy, userId], // Add userId to upvotedBy array
               }
             : issue
         )
@@ -411,7 +411,6 @@ export default function Trending() {
 {issue.votes > 2 && (
   <span>+{Math.max(0, issue.votes - 2)} more</span>
 )}
-
                        
                       </div>
                       {issue.upvotedBy?.includes(userId) ? (
