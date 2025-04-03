@@ -74,7 +74,7 @@ export default function CommunityUpdated() {
   
     try {
       await axios.post(
-        '/api/community/projects',
+        'http://localhost:5000/api/community/projects',
         { name: projectName, goalAmount, description },
         {
           headers: {
