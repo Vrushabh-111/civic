@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import LoadingAnimation from './LoadingAnimation'; 
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -175,7 +176,7 @@ const Profile = () => {
   };
 
   if (loading) {
-    return <div className="loading">Loading...</div>;
+    return <LoadingAnimation />;
   }
 
   if (error) {
